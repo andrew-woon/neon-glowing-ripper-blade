@@ -79,23 +79,23 @@ const Index = () => {
       {/* Main Content */}
       <div className="relative z-10">
         {/* Header */}
-        <header className="text-center pt-16 pb-8">
+        <header className="text-center pt-8 sm:pt-16 pb-8 px-4">
           <div className={`transition-all duration-100 ${isFlashing ? 'brightness-200' : ''}`}>
-            <h1 className="text-7xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-neon-flicker">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-neon-flicker">
               NEOTHERM
             </h1>
-            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text animate-rgb-pulse">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text animate-rgb-pulse">
               X7
             </h2>
-            <div className="text-xl md:text-2xl mt-6 text-cyan-300/80 tracking-wider">
+            <div className="text-sm sm:text-lg md:text-xl lg:text-2xl mt-6 text-cyan-300/80 tracking-wider">
               [ THE ULTIMATE QUANTUM CHAINSAW ]
             </div>
           </div>
         </header>
 
         {/* Hero Chainsaw Visual - More Realistic */}
-        <div className="flex justify-center my-16">
-          <div className="relative">
+        <div className="flex justify-center my-8 sm:my-16 px-4">
+          <div className="relative scale-75 sm:scale-90 md:scale-100">
             {/* Chainsaw Body */}
             <div className="relative w-80 h-24 bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg border border-cyan-400/30 animate-float">
               {/* Handle */}
@@ -156,20 +156,20 @@ const Index = () => {
             </div>
             
             {/* Exhaust */}
-            <div className="absolute -left-12 top-4 w-8 h-4 bg-orange-500/60 rounded-l-full animate-pulse">
+            <div className="absolute -left-12 top-4 w-8 h-14 bg-orange-500/60 rounded-l-full animate-pulse">
               <div className="absolute -left-2 top-1 w-4 h-2 bg-orange-400/40 rounded-l-full animate-pulse"></div>
             </div>
           </div>
         </div>
 
         {/* Description */}
-        <div className="max-w-4xl mx-auto px-6 text-center mb-16">
-          <div className="backdrop-blur-sm bg-slate-900/30 rounded-2xl border border-cyan-400/20 p-8">
-            <p className="text-lg md:text-xl text-cyan-100/90 mb-6 leading-relaxed">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center mb-16">
+          <div className="backdrop-blur-sm bg-slate-900/30 rounded-2xl border border-cyan-400/20 p-6 sm:p-8">
+            <p className="text-base sm:text-lg md:text-xl text-cyan-100/90 mb-6 leading-relaxed">
               Experience the future of cutting technology with our revolutionary quantum-powered chainsaw.
               Engineered with alien-grade materials and powered by miniaturized fusion reactors.
             </p>
-            <p className="text-base text-pink-300/80 italic">
+            <p className="text-sm sm:text-base text-pink-300/80 italic">
               WARNING: May cause temporal rifts, spontaneous combustion of nearby objects, 
               and an overwhelming sense of power. Use responsibly.
             </p>
@@ -177,18 +177,18 @@ const Index = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="max-w-7xl mx-auto px-6 mb-16">
-          <h3 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-16">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             QUANTUM FEATURES
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="bg-slate-900/40 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className={`${feature.color} animate-rgb-pulse mb-4 p-3 rounded-full bg-slate-800/50 w-fit`}>
                     {feature.icon}
                   </div>
-                  <CardTitle className={`${feature.color} text-lg font-bold tracking-wider`}>
+                  <CardTitle className={`${feature.color} text-base sm:text-lg font-bold tracking-wider`}>
                     {feature.title}
                   </CardTitle>
                 </CardHeader>
@@ -203,56 +203,56 @@ const Index = () => {
         </div>
 
         {/* Technical Specifications */}
-        <div className="max-w-4xl mx-auto px-6 mb-16">
-          <h3 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-16">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             TECH SPECIFICATIONS
           </h3>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {specs.map((spec, index) => (
-              <div key={index} className="flex justify-between items-center bg-slate-900/40 backdrop-blur-sm p-6 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
-                <span className="text-cyan-300 text-sm font-medium tracking-wider">{spec.label}:</span>
-                <span className={`${spec.color} text-lg font-bold`}>{spec.value}</span>
+              <div key={index} className="flex justify-between items-center bg-slate-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
+                <span className="text-cyan-300 text-xs sm:text-sm font-medium tracking-wider">{spec.label}:</span>
+                <span className={`${spec.color} text-sm sm:text-lg font-bold`}>{spec.value}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Benefits Section */}
-        <div className="max-w-6xl mx-auto px-6 mb-16">
-          <h3 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-16">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
             QUANTUM ADVANTAGES
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-gradient-to-br from-purple-900/30 to-cyan-900/30 backdrop-blur-sm border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            <Card className="bg-gradient-to-br from-purple-900/50 to-cyan-900/50 backdrop-blur-sm border border-purple-400/40 hover:border-purple-400/60 transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-purple-300 mb-4 flex items-center gap-2">
-                  <Cpu className="w-6 h-6" />
+                <CardTitle className="text-lg sm:text-xl font-bold text-purple-200 mb-4 flex items-center gap-2">
+                  <Cpu className="w-5 h-5 sm:w-6 sm:h-6" />
                   PROFESSIONAL GRADE
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center"><Zap className="w-4 h-4 text-cyan-400 mr-3" /> Cut through reinforced concrete instantly</li>
-                  <li className="flex items-center"><Zap className="w-4 h-4 text-pink-400 mr-3" /> Slice through steel beams like paper</li>
-                  <li className="flex items-center"><Zap className="w-4 h-4 text-green-400 mr-3" /> Demolish structures in record time</li>
-                  <li className="flex items-center"><Zap className="w-4 h-4 text-yellow-400 mr-3" /> Zero maintenance required</li>
+                <ul className="space-y-3 text-slate-100">
+                  <li className="flex items-center text-sm sm:text-base"><Zap className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" /> Cut through reinforced concrete instantly</li>
+                  <li className="flex items-center text-sm sm:text-base"><Zap className="w-4 h-4 text-pink-400 mr-3 flex-shrink-0" /> Slice through steel beams like paper</li>
+                  <li className="flex items-center text-sm sm:text-base"><Zap className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /> Demolish structures in record time</li>
+                  <li className="flex items-center text-sm sm:text-base"><Zap className="w-4 h-4 text-yellow-400 mr-3 flex-shrink-0" /> Zero maintenance required</li>
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="bg-gradient-to-br from-cyan-900/30 to-pink-900/30 backdrop-blur-sm border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300">
+            <Card className="bg-gradient-to-br from-cyan-900/50 to-pink-900/50 backdrop-blur-sm border border-cyan-400/40 hover:border-cyan-400/60 transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
-                  <Shield className="w-6 h-6" />
+                <CardTitle className="text-lg sm:text-xl font-bold text-cyan-200 mb-4 flex items-center gap-2">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
                   SAFETY PROTOCOLS
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center"><Battery className="w-4 h-4 text-orange-400 mr-3" /> Automatic safety shutdown</li>
-                  <li className="flex items-center"><Shield className="w-4 h-4 text-red-400 mr-3" /> Force field protection barrier</li>
-                  <li className="flex items-center"><Settings className="w-4 h-4 text-purple-400 mr-3" /> Biometric security lock</li>
-                  <li className="flex items-center"><Zap className="w-4 h-4 text-blue-400 mr-3" /> Emergency teleportation escape</li>
+                <ul className="space-y-3 text-slate-100">
+                  <li className="flex items-center text-sm sm:text-base"><Battery className="w-4 h-4 text-orange-400 mr-3 flex-shrink-0" /> Automatic safety shutdown</li>
+                  <li className="flex items-center text-sm sm:text-base"><Shield className="w-4 h-4 text-red-400 mr-3 flex-shrink-0" /> Force field protection barrier</li>
+                  <li className="flex items-center text-sm sm:text-base"><Settings className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" /> Biometric security lock</li>
+                  <li className="flex items-center text-sm sm:text-base"><Zap className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" /> Emergency teleportation escape</li>
                 </ul>
               </CardContent>
             </Card>
@@ -260,25 +260,25 @@ const Index = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center pb-16">
-          <div className="backdrop-blur-sm bg-slate-900/40 rounded-2xl border border-cyan-400/20 p-8 max-w-2xl mx-auto">
+        <div className="text-center pb-16 px-4 sm:px-6">
+          <div className="backdrop-blur-sm bg-slate-900/40 rounded-2xl border border-cyan-400/20 p-6 sm:p-8 max-w-2xl mx-auto">
             <div className="mb-8">
-              <div className="text-5xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent mb-4">
                 $99,999.99
               </div>
-              <div className="text-xl text-pink-300/80 line-through mb-2">
+              <div className="text-lg sm:text-xl text-pink-300/80 line-through mb-2">
                 MSRP: $199,999.99
               </div>
-              <div className="text-lg text-cyan-300 font-medium">
+              <div className="text-base sm:text-lg text-cyan-300 font-medium">
                 LIMITED TIME: 50% OFF FIRST 100 UNITS
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold text-lg px-8 py-4 rounded-xl border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 shadow-lg">
+              <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 shadow-lg">
                 ACQUIRE NOW
               </Button>
-              <Button variant="outline" className="border-2 border-cyan-400/50 text-cyan-300 font-bold text-lg px-8 py-4 rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+              <Button variant="outline" className="border-2 border-cyan-400/50 text-cyan-300 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 VIEW SPECS
               </Button>
             </div>
