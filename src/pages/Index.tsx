@@ -280,7 +280,7 @@ const Index = () => {
                   ACQUIRE NOW
                 </Button>
               </Link>
-              <Link to="www.linkedin.com/in/andreww-woon">
+              <Link to="https://www.linkedin.com/in/andreww-woon">
                 <Button variant="outline" className="border-2 border-cyan-400/50 text-cyan-300 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                   VIEW SPECS
                 </Button>
