@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Zap, Flame, Shield, Cpu, Battery, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [glowIntensity, setGlowIntensity] = useState(1);
@@ -275,12 +275,16 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 shadow-lg">
-                ACQUIRE NOW
-              </Button>
-              <Button variant="outline" className="border-2 border-cyan-400/50 text-cyan-300 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                VIEW SPECS
-              </Button>
+              <Link to="/acquire">
+                <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 shadow-lg">
+                  ACQUIRE NOW
+                </Button>
+              </Link>
+              <Link to="/specs">
+                <Button variant="outline" className="border-2 border-cyan-400/50 text-cyan-300 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                  VIEW SPECS
+                </Button>
+              </Link>
             </div>
             
             <div className="mt-6 text-xs text-yellow-300/70 italic">
